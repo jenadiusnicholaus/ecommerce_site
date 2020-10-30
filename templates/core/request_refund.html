@@ -1,0 +1,39 @@
+{% extends "core/base2.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+  <!--Main Layout-->
+  <main>
+
+    <!-- Main Container -->
+    <div class="container">
+
+      <section class="section my-5 pb-5">
+
+        <h2 class="my-5 h2 text-center">Request Refund</h2>
+        <!-- Shopping Cart table -->
+        <div class="table-responsive">
+            <form action="." method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+        <button type='submit' class='btn btn-primary'>Submit</button>
+            </form>
+        </div>
+        <!-- Shopping Cart table -->
+
+      </section>
+
+    </div>
+    <!-- /Main Container -->
+
+  </main>
+  <!--Main Layout-->
+
+{% endblock %}
+
+
+
+
+
